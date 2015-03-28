@@ -82,6 +82,7 @@ public class UserRest {
 		RequestContext context = null;
 		try {
 			context = serviceUtil.getRequestContext();
+			logger.debug("Sample Logger");
 			UserDataModel createdUser = userService.createGuestUser(user,
 					context);
 			return Response.ok(createdUser).build();
