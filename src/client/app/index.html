@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <script>// <![CDATA[
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client:plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    // ]]></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
     <script src="assets/lib/angular.min.js"></script>
     <script src="assets/lib/angular-route.min.js"></script>
     <script src="app.modules.js"></script>
     <script src="app.routes.js"></script>
     <script src="components/home/indexController.js"></script>
     <script src="shared/constants/constants.js"></script>
-    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
     <meta charset="UTF-8">
     <title>Angular Demo</title>
 </head>
@@ -15,16 +23,7 @@
     <div>{{title}}</div>
     <br>
     <div id="display">
-        <span id="signinButton">
-          <span
-                  class="g-signin"
-                  data-callback="{{googleSignInCallback}}"
-                  data-clientid="{{clientId}}"
-                  data-cookiepolicy="single_host_origin"
-                  data-requestvisibleactions="http://schema.org/AddAction"
-                  data-scope="https://www.googleapis.com/auth/plus.login">
-          </span>
-        </span>
+        <span id="signinButton"></span>
     </div>
 </body>
 </html>
