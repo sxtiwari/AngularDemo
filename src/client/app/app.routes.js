@@ -2,12 +2,12 @@ angular.module('sso').config([
    '$routeProvider',
     function(a){
         a
-        .when('/home',{
+        .when('/',{
             templateUrl: 'index.html',
-            controller: 'afnHomeController'
+            controller: 'indexController'
         })
         .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/'
         });
     }
 ]);
